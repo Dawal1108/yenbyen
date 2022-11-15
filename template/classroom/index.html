@@ -1,0 +1,99 @@
+{% extends 'classroom/base.html' %}
+{% load static %}
+{% block content %}
+
+{% if messages %}
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+  {% for message in messages %}
+    <div class="alert {% if message.tags %} alert-{{ message.tags }}{% endif %}">{{ message|safe }}</div>
+  {% endfor %}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endif %}
+
+<div class="banner">
+      <img src="{% static 'images/mrs.jpg' %}" alt="">
+      <div class="content">
+        <h1 class="text-white">Yenbyen Fellowship Class Manager</h1>
+        <p>A Fellow-Tutor Portal</p>
+      </div>
+    </div>
+
+    <div class="about">
+      <h1 >About Us</h1>
+      <p>Yenbyen Fellowship Class Manager is a fellow-tutor portal with various classroom features like uploading assignments, submissions, Class Notice and many more. Fellows and Tutors can login in the portal and can experience interactive classroom experience online.
+      One of the most powerful features of Yenbyen Fellowship class manager is its Fellow managing abilities. Tutor can easily manage their Fellows and keep them updated about all of the activities in class.</p>
+    </div>
+
+    <div class="use-content">
+      <h1>Our Services</h1>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="box">
+            <div class="imgBx">
+              <img src="{% static 'images/d.jpg' %}" alt="">
+            </div>
+            <div class="content">
+              <h3>For Tutor</h3>
+              <ol style="font-size: 12px;">
+                <li>Tutors can add fellow in their class through Add Fellow option.</li>
+                <li>After adding Fellows in their class, Tutor can give or edit their class fellows marks.</li>
+                <li>Tutors can also write notice which will be send to all fellows in their class.</li>
+                <li>Tutors can upload assignments through upload assignment options.</li>
+                <li>Tutor can check their fellow's assignment submission and give them marks accordingly.</li>
+                <li>Fellows can message Tutors directly and their messages can be seen in Inbox.</li>
+                <li>Tutor can also see all the marks given by them to a fellow by accessing their Marks profile and can edit their marks.</li>
+                <li>User can add profile pic through edit profile option.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="box">
+            <div class="imgBx">
+              <img src="{% static 'images/yen.jpeg' %}" alt="">
+            </div>
+            <div class="content">
+              <h3>For Fellows</h3>
+              <ol>
+                <li>Fellows can login in the portal and keep themselves updated of all the activities going on in the class.</li>
+                <li>Fellows can see the notice given by their tutor in the Class Notice option.</li>
+                <li>Fellows can download their assignments in the Assignments option and can also submit it their. ( Once assignment is submitted, it can't be changed later. )</li>
+                <li> Fellows can contact any tutor through message option in All Tutors List. </li>
+                <li>Fellows can check their marks in the Marks option.</li>
+                <li>User can add profile pic through edit profile option.</li>
+              </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="research">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{% static 'images/zara.jpeg' %}" alt="">
+        </div>
+        <div class="col-md-8">
+          <div class="digital-content">
+            <h1>Digital Learning</h1>
+            <br>
+            <p>We surveyed over 1,000 tutors and administrators to better understand the state of digital skills and learning. Yenbye Fellowship Class Manager provides all facilities that is needed for improvising digital skills and learning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="social">
+      <h1>Are you ready to advance what's possible in education.</h1>
+      <h3>Then connect with us on social media.</h3>
+      <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+      <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
+      <a class="social-icon" href="#"><i class="fab fa-instagram"></i></a>
+      <a class="social-icon" href="#"><i class="fab fa-google"></i></a>
+      <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+{% endblock %}
